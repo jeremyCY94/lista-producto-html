@@ -139,7 +139,7 @@
 	            cargarListaProductos(){
 	            	axios({
 					  method: 'GET',
-					  url: 'http://127.0.0.1:8000/producto',
+					  url: 'http://64.226.115.72/producto',
 					}).then((res)=>{
 						this.listPrd = res.data;
 						this.filterPrd = res.data;
@@ -148,7 +148,7 @@
 	            saveProducto(){
 	            	axios({
 					  method: 'POST',
-					  url: 'http://127.0.0.1:8000/producto/save',
+					  url: 'http://64.226.115.72/producto/save',
 					  data:{
 					  	id:this.idproducto,
 					  	nombre:this.nombre,
@@ -165,7 +165,7 @@
 				deleteProducto(id){
 	            	axios({
 					  method: 'DELETE',
-					  url: 'http://127.0.0.1:8000/producto/delete/'+id,
+					  url: 'http://64.226.115.72/producto/delete/'+id,
 					}).then((res)=>{
 						this.cargarListaProductos();
 						this.myModal.hide();
@@ -174,7 +174,7 @@
 				editProducto(id){
 	            	axios({
 					  method: 'GET',
-					  url: 'http://127.0.0.1:8000/producto/'+id,
+					  url: 'http://64.226.115.72/producto/'+id,
 					}).then((res)=>{
 						let data = res.data;
 						if(data){
