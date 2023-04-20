@@ -96,7 +96,7 @@
 			</div>
 			<div class="mb-3">
 			  <label for="formGroupExampleInput2" class="form-label">Precio</label>
-			  <input type="number" class="form-control" x-model="precio" placeholder="">
+			  <input type="number" class="form-control" x-model="precio" placeholder="" id="inputPrecio" x-on:click="onClickPrecio()">
 			</div>
 	      </div>
 
@@ -135,7 +135,9 @@
 					console.log(this.myModal);
 	 				this.cargarListaProductos();
 	 			},
-
+	 			onClickPrecio(){
+	 				document.getElementById("inputPrecio").select();
+	 			},
 	            cargarListaProductos(){
 	            	axios({
 					  method: 'GET',
