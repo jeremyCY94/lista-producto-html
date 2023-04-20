@@ -139,7 +139,7 @@
 	            cargarListaProductos(){
 	            	axios({
 					  method: 'GET',
-					  url: 'minegocioconsistema.tk/producto',
+					  url: 'https://minegocioconsistema.tk/producto',
 					}).then((res)=>{
 						this.listPrd = res.data;
 						this.filterPrd = res.data;
@@ -148,7 +148,7 @@
 	            saveProducto(){
 	            	axios({
 					  method: 'POST',
-					  url: 'minegocioconsistema.tk/producto/save',
+					  url: 'https://minegocioconsistema.tk/producto/save',
 					  data:{
 					  	id:this.idproducto,
 					  	nombre:this.nombre,
@@ -165,7 +165,7 @@
 				deleteProducto(id){
 	            	axios({
 					  method: 'DELETE',
-					  url: 'minegocioconsistema.tk/producto/delete/'+id,
+					  url: 'https://minegocioconsistema.tk/producto/delete/'+id,
 					}).then((res)=>{
 						this.cargarListaProductos();
 						this.myModal.hide();
@@ -174,7 +174,7 @@
 				editProducto(id){
 	            	axios({
 					  method: 'GET',
-					  url: 'minegocioconsistema.tk/producto/'+id,
+					  url: 'https://minegocioconsistema.tk/producto/'+id,
 					}).then((res)=>{
 						let data = res.data;
 						if(data){
